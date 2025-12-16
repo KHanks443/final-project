@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baseball Training Log | Home</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span>⚾</span> Training<span>Log</span>
+      </a>
+
+      <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="navLinks">
+        Menu
+      </button>
+
+      <div id="navLinks" class="nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Session</a>
+        <a href="logs.html">View Logs</a>
+        <a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB.com</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <article class="card">
+      <h1>Baseball Training Log</h1>
+      <p class="muted">
+        A simple website for tracking workouts and practice sessions. Add a session, then view it in the logs.
+        Built with HTML/CSS/JavaScript + Express + SQLite.
+      </p>
+
+      <h2>Quick Checklist</h2>
+      <ul>
+        <li>3 pages linked with a navbar</li>
+        <li>Mobile-friendly layout and menu</li>
+        <li>Form validated in JavaScript with clear errors</li>
+        <li>Backend API routes + SQLite database</li>
+      </ul>
+
+      <div class="grid-2">
+        <div class="card">
+          <h2>Next Steps</h2>
+          <ol>
+            <li>Go to <a href="add.html">Add Session</a></li>
+            <li>Submit the form (POST to backend)</li>
+            <li>See the data on <a href="logs.html">View Logs</a> (GET from backend)</li>
+          </ol>
+        </div>
+
+        <div class="card">
+          <h2>Remote Image</h2>
+          <img class="responsive" alt="A baseball on a field" src="https://images.unsplash.com/photo-1521412644187-c49fa049e84d?auto=format&fit=crop&w=1200&q=60" />
+          <p class="muted">Remote image (Unsplash).</p>
+        </div>
+      </div>
+    </article>
+
+    <aside class="card">
+      <h2>Local Image</h2>
+      <img class="responsive" src="images/glove.jpg" alt="A baseball glove (local image)" />
+      <p class="muted">Local image loaded from the project folder.</p>
+
+      <h2>Example Table</h2>
+      <table aria-label="Example workout table">
+        <thead>
+          <tr>
+            <th>Workout</th>
+            <th>Goal</th>
+            <th>Time</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Batting cage</td>
+            <td>Contact</td>
+            <td>45 min</td>
+          </tr>
+          <tr>
+            <td>Strength</td>
+            <td>Power</td>
+            <td>60 min</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p class="muted" style="margin-top:12px;">
+        External link: <a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB.com</a>
+      </p>
+    </aside>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <small>Built for a Web Development semester project.</small>
+  </div>
+</footer>
+</body>
+</html>
