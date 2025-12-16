@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baseball Training Log | View Logs</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span>⚾</span> Training<span>Log</span>
+      </a>
+
+      <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="navLinks">
+        Menu
+      </button>
+
+      <div id="navLinks" class="nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Session</a>
+        <a href="logs.html">View Logs</a>
+        <a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB.com</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card">
+    <h1>Training Logs</h1>
+    <p class="muted">
+      This page uses <strong>fetch()</strong> to GET data from the backend API and display it in a table.
+    </p>
+
+    <div class="notice" id="logsInfo" aria-live="polite">Loading sessions...</div>
+
+    <table aria-label="Training session table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Workout</th>
+          <th>Date</th>
+          <th>Intensity</th>
+          <th>Mobility</th>
+          <th>Goal</th>
+          <th>Notes</th>
+        </tr>
+      </thead>
+      <tbody id="logsBody">
+        <tr><td colspan="7">Loading...</td></tr>
+      </tbody>
+    </table>
+
+    <section class="card" style="margin-top:14px;">
+      <h2>Helpful List</h2>
+      <ul>
+        <li>Keep notes specific: “inside pitch,” “throwing mechanics,” etc.</li>
+        <li>Use the “Recovery” workout after heavy days.</li>
+        <li>Track consistency weekly.</li>
+      </ul>
+    </section>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    <small>Backend serves all files (no Live Server needed).</small>
+  </div>
+</footer>
+</body>
+</html>
