@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Baseball Training Log | Add Session</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="app.js" defer></script>
+</head>
+<body>
+<header>
+  <div class="container">
+    <nav class="navbar" aria-label="Primary">
+      <a class="brand" href="index.html">
+        <span>⚾</span> Training<span>Log</span>
+      </a>
+
+      <button class="menu-btn" type="button" data-menu-btn aria-expanded="false" aria-controls="navLinks">
+        Menu
+      </button>
+
+      <div id="navLinks" class="nav-links" data-nav-links>
+        <a href="index.html">Home</a>
+        <a href="add.html">Add Session</a>
+        <a href="logs.html">View Logs</a>
+        <a href="https://www.mlb.com/" target="_blank" rel="noopener">MLB.com</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <article class="card">
+    <h1>Add a Training Session</h1>
+    <p class="muted">Fill out the form. JavaScript validates it, then submits to the backend and redirects to the logs.</p>
+
+    <form id="sessionForm" method="post" novalidate>
+      <div>
+        <label for="athleteName">Name (text input)</label>
+        <input id="athleteName" name="athleteName" type="text" placeholder="Your name" />
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div>
+        <label for="email">Email (special input type)</label>
+        <input id="email" name="email" type="email" placeholder="you@example.com" />
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div>
+        <label for="sessionDate">Session Date (special input type)</label>
+        <input id="sessionDate" name="sessionDate" type="date" />
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div>
+        <label for="workoutType">Workout Type (dropdown select)</label>
+        <select id="workoutType" name="workoutType">
+          <option value="">Choose one</option>
+          <option value="Batting">Batting</option>
+          <option value="Fielding">Fielding</option>
+          <option value="Strength">Strength</option>
+          <option value="Conditioning">Conditioning</option>
+          <option value="Recovery">Recovery</option>
+        </select>
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div id="intensityWrap">
+        <label>Intensity (radio buttons)</label>
+        <div class="inline" role="group" aria-label="Intensity">
+          <label><input type="radio" name="intensity" value="Low" /> Low</label>
+          <label><input type="radio" name="intensity" value="Medium" /> Medium</label>
+          <label><input type="radio" name="intensity" value="High" /> High</label>
+        </div>
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div>
+        <label>
+          <input id="didMobility" name="didMobility" type="checkbox" />
+          Did mobility work? (checkbox)
+        </label>
+      </div>
+
+      <div>
+        <label for="goal">Main Goal (dropdown select)</label>
+        <select id="goal" name="goal">
+          <option value="">Choose a goal</option>
+          <option value="Consistency">Consistency</option>
+          <option value="Power">Power</option>
+          <option value="Contact">Contact</option>
+          <option value="Speed">Speed</option>
+          <option value="Recovery">Recovery</option>
+        </select>
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <div>
+        <label for="notes">Notes (textarea)</label>
+        <textarea id="notes" name="notes" placeholder="What did you work on? What felt good? What needs improvement?"></textarea>
+        <div class="error" role="alert">Error</div>
+      </div>
+
+      <button type="submit">Submit Session</button>
+
+      <div id="statusBox" class="notice" aria-live="polite">
+        Form uses fetch() to POST to the backend and then redirects.
+      </div>
+    </form>
+  </article>
+</main>
+
+<footer>
+  <div class="container">
+    <small>Accessible colors, semantic HTML, and mobile menu included.</small>
+  </div>
+</footer>
+</body>
+</html>
